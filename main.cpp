@@ -8,7 +8,7 @@ float timer;
 sf::Vertex getVertexFromPoint(sf::Vector2f point)
 {
     sf::Vertex vertex;
-    vertex.position = sf::Vector2f((3440 / 2) + point.x, (1440 / 2) - 750 + point.y);
+    vertex.position = sf::Vector2f((3440 / 2) + point.x, (1440 / 2) - 750 + point.y); // Change 3440 and 1440 to your screen width and height resolution
     vertex.color = sf::Color((1500 - (point.y + 1500)) / 3000 * 255, 0, (point.y + 1500) / 3000 * 255);
     return vertex;
 }
@@ -41,7 +41,7 @@ sf::Vector2f getCirclePosition(float angle, sf::Vector2f start, sf::Vector2f end
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(3440,1440), "Krapj", sf::Style::Fullscreen);
+    sf::RenderWindow window(sf::VideoMode(3440,1440), "Krapj", sf::Style::Fullscreen); // Change 3440 and 1440 to your screen width and height resolution
     
     window.setMouseCursorVisible(false);
     sf::Clock counter;
